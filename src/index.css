@@ -1,0 +1,125 @@
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.S--noHomeBar {
+  
+}
+
+/* *{
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+} */
+img {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+input, textarea {
+  -webkit-user-select:auto; /*webkit浏览器*/
+}
+  
+:root {
+  --brand-1: #2e91fd;
+  --brand-2: #2982e3;
+  --brand-3: #82bdfe;
+  --black: #000;
+  --white: #fff;
+  --gray-1: rgba(0, 0, 0, 0.87);
+  --gray-2: rgba(0, 0, 0, 0.54);
+  --gray-3: rgba(0, 0, 0, 0.4);
+  --gray-4: rgba(0, 0, 0, 0.26);
+  --gray-5: rgba(0, 0, 0, 0.2);
+  --gray-6: rgba(0, 0, 0, 0.1);
+  --gray-7: rgba(0, 0, 0, 0.05);
+  --gray-8: rgba(0, 0, 0, 0.03);
+  --light-1: #f2f4f5;
+  --light-2: #fafafa;
+  --blue: #39f;
+  --gray-dark: #333;
+  --green: #62d957;
+  --orange: #f70;
+  --red: #f56262;
+  --yellow: #ffc233;
+  --yellow-light: #fff9db;
+  --shadow-1: 0 1.5px 3px 0 rgba(0, 0, 0, 0.06), 0 1.5px 3px 0 rgba(0, 0, 0, 0.08);
+  --shadow-2: 0 6px 6px 0 rgba(0, 0, 0, 0.03), 0 4px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-3: 0 6px 6px 0 rgba(0, 0, 0, 0.03), 0 4px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-4: 0 10px 10px 0 rgba(0, 0, 0, 0.03), 0 8px 4px 0 rgba(0, 0, 0, 0.02);
+  --shadow-5: 0 10px 10px 0 rgba(0, 0, 0, 0.03), 0 8px 4px 0 rgba(0, 0, 0, 0.02);
+}
+.ChatApp,
+.MessageContainer,
+.Navbar,
+.Message .Bubble,
+.QuickReplies,
+.ChatFooter {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Video-playIcon {
+  background-image: url('https://file02.xgimi.com/super-app/89fcfd0936c04b521033609f1b0554c9') !important;
+}
+.ChatApp {
+  background-color: var(--light-1);
+}
+.Navbar {
+  background-color: var(--white);
+}
+.Navbar .IconBtn {
+  color: var(--gray-2);
+}
+.Navbar-title {
+  color: var(--gray-1);
+}
+.Message.left .Bubble {
+  background-color: #fff;
+  color: var(--gray-1);
+  overflow: hidden;
+}
+.Message.right .Bubble {
+  background-color: #2982e3;
+  color: #ffffff;
+  overflow: hidden;
+}
+.QuickReplies,
+.ChatFooter {
+  background-color: rgba(242, 244, 245, 0.95);
+}
+.Message.left .Bubble {
+  font-size: 16px;
+  border-radius: 2px 20px 20px 20px;
+}
+.Message.right .Bubble {
+  font-size: 16px;
+  border-radius: 20px 2px 20px 20px;
+}
+.Card {
+  border-radius: 12px;
+}
+.Btn {
+  border-radius: 16px;
+}
+.QuickReply {
+  border-radius: 20px;
+}
+.Avatar {
+  border-radius: 4px;
+}
+:root { --brand-1: #2e91fd;--brand-2: #2982e3;--brand-3: #82bdfe;--black: #000;--white: #fff;--gray-1: rgba(0,0,0,0.87);--gray-2: rgba(0,0,0,0.54);--gray-3: rgba(0,0,0,0.4);--gray-4: rgba(0,0,0,0.26);--gray-5: rgba(0,0,0,0.2);--gray-6: rgba(0,0,0,0.1);--gray-7: rgba(0,0,0,0.05);--gray-8: rgba(0,0,0,0.03);--light-1: #f2f4f5;--light-2: #fafafa;--blue: #39f;--gray-dark: #333;--green: #62d957;--orange: #f70;--red: #f56262;--yellow: #ffc233;--yellow-light: #fff9db; }
+.empty_default {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+a {color: #2982e3 !important;}
