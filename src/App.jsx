@@ -1,7 +1,7 @@
 import React from 'react';
 import Chat, { Bubble, useMessages } from '@chatui/core';
 
-const App = () => {
+export default () => {
   // 消息列表
   const { messages, appendMsg, setTyping } = useMessages();
 
@@ -46,12 +46,9 @@ const App = () => {
 
   return (
     <Chat
-      navbar={{ title: 'ChatUI Demo' }}
       messages={messages}
       renderMessageContent={renderMessageContent}
       onSend={handleSend}
     />
   );
 };
-
-export default App;
