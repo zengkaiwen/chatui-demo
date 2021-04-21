@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Chat, { Bubble, useMessages } from '@chatui/core';
 
 import Composer from './components/Composer';
@@ -6,6 +6,19 @@ import Composer from './components/Composer';
 export default () => {
   // 消息列表
   const { messages, appendMsg, setTyping } = useMessages();
+
+  useEffect(() => {
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    if(isAndroid){
+      document.body.style.height = window.innerHeight + 'px';
+    }
+    window.addEventListener('resize', function (){
+      if (isAndroid) {
+        document.body.style.height = window.innerHeight + 'px';
+      }
+    })
+  }, [])
 
   // 发送回调
   function handleSend(type, val) {

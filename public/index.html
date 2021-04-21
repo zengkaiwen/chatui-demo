@@ -16,7 +16,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>ChatUI Demo</title>
+  <title>ChatUI Demo local</title>
 </head>
 
 <body>
@@ -33,11 +33,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script>
-    document.body.style.height = window.screen.availHeight +'px';
-    window.addEventListener('resize', function (){
-      document.body.style.height = window.screen.availHeight +'px';
-    })
-
     // 支持低版本Android
     if (typeof Set === 'undefined' || typeof Set.prototype.keys !== 'function') {
       document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/??ie10.js,css-vars.js"><\/script>');
