@@ -1,6 +1,8 @@
 import React from 'react';
 import Chat, { Bubble, useMessages } from '@chatui/core';
 
+import Composer from './components/Composer';
+
 export default () => {
   // 消息列表
   const { messages, appendMsg, setTyping } = useMessages();
@@ -49,6 +51,7 @@ export default () => {
       messages={messages}
       renderMessageContent={renderMessageContent}
       onSend={handleSend}
+      Composer={Composer}
     />
   );
 };
