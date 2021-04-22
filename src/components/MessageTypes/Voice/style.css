@@ -1,0 +1,20 @@
+.voice_buble {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.voice_buble .icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+.voice_buble .icon_left {
+  margin: 0 0 0 10px;
+}
+.voice_buble .icon_right {
+  margin: 0 10px 0 20px;
+}
+.voice_buble .duration_text {
+  flex: 1;
+}

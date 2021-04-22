@@ -1,0 +1,48 @@
+.emoji_wrap {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.emoji_wrap .emoji_list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.emoji_wrap .emoji_list .emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.emoji_wrap .options {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.emoji_wrap .options .btn {
+  width: 80px;
+  background-color: #fff;
+  border-radius: 4px;
+  height: 36px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-size: 28px;
+}
+.emoji_wrap .options .btn:active {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.emoji_wrap .options .btn img {
+  height: 30px;
+}
+.emoji_wrap .options .btn.primary {
+  background-color: #2982e3;
+  color: white;
+}
