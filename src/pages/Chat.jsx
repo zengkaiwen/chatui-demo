@@ -5,7 +5,7 @@ import Chat, { useMessages, Empty } from '@chatui/core';
 import {
   Text, Image, System, Audio, File, EmojiList,
   Divider, Video, Card, List, Progress, Composer
-} from '../Components';
+} from '../Components/index';
 
 import { emojiZh2En } from '../common/emoji';
 import useBridge from '../hooks/useBridge'
