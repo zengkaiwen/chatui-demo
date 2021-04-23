@@ -46,7 +46,7 @@ const ChatApp = () => {
   const { messages, appendMsg, updateMsg, prependMsgs } = useMessages([]);
 
   useEffect(() => {
-    document.documentElement.style.height = window.innerHeight + 'px';
+    
   }, [])
 
   const xgimi = useBridge((xgimi) => {
@@ -80,7 +80,7 @@ const ChatApp = () => {
       console.log('高度变化', height);
 
       if (isAndroid) {
-        document.body.scrollTop = document.body.scrollHeight
+        document.documentElement.style.height = window.innerHeight + 'px';
       }
 
       if (height === 0 && inputRef) {

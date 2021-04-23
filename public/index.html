@@ -33,6 +33,8 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script>
+    document.documentElement.style.height = window.innerHeight + 'px';
+
     // 支持低版本Android
     if (typeof Set === 'undefined' || typeof Set.prototype.keys !== 'function') {
       document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/??ie10.js,css-vars.js"><\/script>');
