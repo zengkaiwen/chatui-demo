@@ -80,7 +80,7 @@ const ChatApp = () => {
       console.log('高度变化', height);
 
       if (isAndroid) {
-        // document.documentElement.style.height = window.innerHeight + 'px';
+        document.body.scrollTop = document.body.scrollHeight
       }
 
       if (height === 0 && inputRef) {
