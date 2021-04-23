@@ -32,8 +32,6 @@ const msgTypeMap = {
 // 接到新消息的事件方法可能返回多条相同消息，采用Map避免展示列表的消息重复
 const MSG_ID_MAP = {}; // 消息展示列表
 const MSG_FILE_ARR = [] // 文件类型的消息，如图片、视频, [{id， type}], type: image, video
-const ua = window.navigator.userAgent;
-const isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
 
 const ChatApp = () => {
   const composerRef = useRef(null);
@@ -46,15 +44,7 @@ const ChatApp = () => {
   const { messages, appendMsg, updateMsg, prependMsgs } = useMessages([]);
 
   useEffect(() => {
-    if(isAndroid){
-      document.body.style.height = window.innerHeight + 'px';
-    }
-    window.addEventListener('resize', function() {
-      if (isAndroid) {
-        console.log('窗口大小改变');
-        document.body.style.height = window.innerHeight + 'px';
-      }
-    })
+
   }, [])
 
   const xgimi = useBridge((xgimi) => {

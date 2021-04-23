@@ -33,6 +33,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script>
+    const ua = window.navigator.userAgent;
+    const isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
+    if(isAndroid){
+      document.body.style.height = window.innerHeight + 'px';
+    }
+    window.addEventListener('resize', function() {
+      if (isAndroid) {
+        console.log('窗口大小改变');
+        document.body.style.height = window.innerHeight + 'px';
+      }
+    })
     // 支持低版本Android
     if (typeof Set === 'undefined' || typeof Set.prototype.keys !== 'function') {
       document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/??ie10.js,css-vars.js"><\/script>');
