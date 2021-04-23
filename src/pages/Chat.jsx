@@ -46,7 +46,15 @@ const ChatApp = () => {
   const { messages, appendMsg, updateMsg, prependMsgs } = useMessages([]);
 
   useEffect(() => {
-    
+    if(isAndroid){
+      document.body.style.height = window.innerHeight + 'px';
+    }
+    window.addEventListener('resize', function() {
+      if (isAndroid) {
+        console.log('窗口大小改变');
+        document.body.style.height = window.innerHeight + 'px';
+      }
+    })
   }, [])
 
   const xgimi = useBridge((xgimi) => {
@@ -78,11 +86,6 @@ const ChatApp = () => {
     });
     xgimi.addBridgeListener('KEYBOARD_HEIGHT_CHANGE', (height) => {
       console.log('高度变化', height);
-
-      if (isAndroid) {
-        document.documentElement.style.height = window.innerHeight + 'px';
-      }
-
       if (height === 0 && inputRef) {
         inputRef.current.blur && inputRef.current.blur();
       }
