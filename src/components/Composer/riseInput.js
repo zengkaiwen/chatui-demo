@@ -42,6 +42,7 @@ export default function riseInput(input, target) {
   };
 
   input.addEventListener('focus', () => {
+    console.log('input focus')
     setTimeout(scrollIntoView, 300);
     scrollTimer = setTimeout(scrollIntoView, 1000);
   });

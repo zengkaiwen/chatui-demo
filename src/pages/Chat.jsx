@@ -80,7 +80,6 @@ const ChatApp = () => {
       console.log('高度变化', height);
 
       if (isAndroid) {
-        console.log('安卓')
         // document.documentElement.style.height = window.innerHeight + 'px';
       }
 
