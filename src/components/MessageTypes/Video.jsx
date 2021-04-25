@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Bubble, Icon } from '@chatui/core';
+import { isIOS } from '../../common/utils';
 
 const Video = (props) => {
   const {
@@ -44,16 +45,14 @@ const Video = (props) => {
           <Bubble type="image">
             <video
               ref={videoRef}
-              style={{ maxWidth: 160, maxHeight: 320, display: play ? 'block' : 'none' }}
-              playsinline="true"
-              webkit-playsinline="true"
-              x5-video-player-type="h5"
+              style={{ maxWidth: 200, maxHeight: 320, display: play ? 'block' : 'none' }}
               src={fileUrl}
-              controls
+              preload="auto"
+              controls={isIOS ? "controls" : ""}
             />
             <div style={{ position: 'relative', display: !play ? 'block' : 'none' }} onClick={handlePlay}>
               <img
-                style={{ maxWidth: 160, maxHeight: 320 }}
+                style={{ maxWidth: 200, maxHeight: 320 }}
                 src={cover}
                 onLoad={handleCoverLoad}
                 alt="视频封面图"

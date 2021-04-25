@@ -2,6 +2,13 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
+  border: 1px solid red;
+}
+.MessageContainer {
+  background-color: rgb(222, 250, 190);
+}
+.ChatFooter {
+  border: 1px solid #2982e3;
 }
 .S--noHomeBar {
   

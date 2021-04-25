@@ -35,7 +35,7 @@ export default function riseInput(input, target) {
     if (scrollType === 0) return;
     if (scrollType === 1) {
       // 去掉这一条，解决ios键盘弹起时输入框与输入法还隔一个输入法高度问题
-      document.body.scrollTop = document.body.scrollHeight;
+      // document.body.scrollTop = document.body.scrollHeight;
     } else {
       target.scrollIntoView(false);
     }
