@@ -48,7 +48,8 @@ const Video = (props) => {
               style={{ maxWidth: 200, maxHeight: 320, display: play ? 'block' : 'none' }}
               src={fileUrl}
               preload="auto"
-              controls={isIOS ? "controls" : ""}
+              controls={isIOS ? "controls": ""}
+              x5-video-player-type="h5-page"
             />
             <div style={{ position: 'relative', display: !play ? 'block' : 'none' }} onClick={handlePlay}>
               <img
