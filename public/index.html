@@ -7,7 +7,7 @@
   <meta name="description" content="Web site created using create-react-app" />
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
-  <title>产品专家</title>
+  <title>产品专家1</title>
 </head>
 
 <body>
@@ -25,7 +25,12 @@
 
     const ua = window.navigator.userAgent;
     const isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
-    document.body.style.height = window.innerHeight + 'px';
+    document.documentElement.style.height = window.innerHeight + 'px';
+    // if (isAndroid) {
+    //   document.body.style.height = window.innerHeight + 'px';
+    // } else {
+    //   document.documentElement.style.height = window.innerHeight + 'px';
+    // }
     window.addEventListener('resize', function() {
       if (isAndroid) {
         console.log('窗口大小改变', window.innerHeight);
