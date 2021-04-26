@@ -23,6 +23,13 @@
         document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
     })();
 
+    // 支持低版本Android
+    if (typeof Set === 'undefined' || typeof Set.prototype.keys !== 'function') {
+      document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/??ie10.js,css-vars.js"><\/script>');
+    } else if (!(window.CSS && CSS.supports('color', 'var(--a)'))) {
+      document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/css-vars.js"><\/script>');
+    }
+
     const ua = window.navigator.userAgent;
     const isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
     // document.documentElement.style.height = window.innerHeight + 'px';
@@ -37,12 +44,6 @@
         // document.body.style.height = window.innerHeight + 'px';
       }
     })
-    // 支持低版本Android
-    if (typeof Set === 'undefined' || typeof Set.prototype.keys !== 'function') {
-      document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/??ie10.js,css-vars.js"><\/script>');
-    } else if (!(window.CSS && CSS.supports('color', 'var(--a)'))) {
-      document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/css-vars.js"><\/script>');
-    }
   </script>
   <script src="//g.alicdn.com/chatui/icons/0.2.7/index.js"></script>
 </body>
