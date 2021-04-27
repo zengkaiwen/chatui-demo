@@ -30,8 +30,8 @@
       document.write('<script src="//g.alicdn.com/alime/polyfill/0.1.1/css-vars.js"><\/script>');
     }
 
-    const ua = window.navigator.userAgent;
-    const isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
+    var ua = window.navigator.userAgent;
+    var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
     // document.documentElement.style.height = window.innerHeight + 'px';
     if (isAndroid) {
       document.body.style.height = window.innerHeight + 'px';
